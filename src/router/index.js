@@ -4,6 +4,8 @@ const Home=()=>import("../views/home/home");
 const Category=()=>import("../views/category/Category");
 const ShoppingCart=()=>import("../views/shoppingCart/ShoppingCart");
 const Profile=()=>import("../views/profile/Profile");
+const Detail=()=>import("../views/detail/Detail");
+
 
 
 Vue.use(VueRouter);
@@ -11,7 +13,7 @@ Vue.use(VueRouter);
 const routes = [
     {
         path:"/",
-        redirect:'/Profile'
+        redirect:'/Home'
     },
     {
         path:"/Home",
@@ -29,6 +31,10 @@ const routes = [
         path:"/profile",
         component:()=>import("../views/profile/Profile")
     },
+    {
+        path:'/detail',
+        component:Detail
+    }
 
 ];
 
